@@ -21,9 +21,6 @@ function App () {
     return Math.random().toString(36).substring(2, 9)
   }
 
-  // Función que se le pasa al componente SearchBar para que pueda ejecutarla
-  // y realizar la búsqueda en la API
-
   const sendSearch = (search) => {
     if (search === '') {
       fetch(`https://api.giphy.com/v1/gifs/trending?api_key=${apiKey}&limit=30&rating=g`)
